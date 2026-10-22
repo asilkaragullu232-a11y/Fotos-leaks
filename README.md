@@ -141,7 +141,7 @@ button:active {
     <div class="line"></div>
 
     <div class="message">
-      Sophia ist 14,<br>
+      Sophia ist 13,<br>
       verhält sich aber<br>
       wie eine <span class="highlight">7-Jährige.</span>
     </div>
