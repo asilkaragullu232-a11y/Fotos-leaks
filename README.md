@@ -162,7 +162,8 @@
 
                 <!-- Offizielles GTA VI Logo direkt aus deinem Bild -->
                 <div class="flex items-center">
-                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAP//////////////////////////////////////////////////////////////////////////////////////wgALCAABAAEBAREA/8QAFBABAAAAAAAAAAAAAAAAAAAAAP/aAAgBAQABPxA=" alt="GTA VI Logo" class="h-10 sm:h-12 w-auto object-contain drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]" />
+                    <img src="data:image/jpeg;base64,<img width="3840" height="2916" alt="image" src="https://github.com/user-attachments/assets/8eaf4195-fe37-434c-9664-00c291fbecbf" />
+ alt="GTA VI Logo" class="h-10 sm:h-12 w-auto object-contain drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]" />
                 </div>
             </div>
 
