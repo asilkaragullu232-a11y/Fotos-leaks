@@ -101,38 +101,38 @@
             Willkommen in Leonida
         </h1>
 
-        <!-- COUNTDOWN-CONTAINER (Optimierte Breiten und feste Spalten gegen Ineinandergreifen) -->
+        <!-- COUNTDOWN-CONTAINER (Ziffern und Einheiten sauber nebeneinander in einer Zeile) -->
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 w-full max-w-5xl mb-12">
             <!-- Tage -->
             <div class="relative group">
                 <div class="absolute -inset-0.5 bg-gradient-to-r from-[#fcaf17] to-pink-600 rounded-2xl blur opacity-30 group-hover:opacity-75 transition duration-500"></div>
-                <div class="relative bg-black/85 backdrop-blur-2xl border border-white/20 rounded-2xl p-6 shadow-2xl flex flex-col items-center justify-center min-h-[160px]">
-                    <div id="days" class="countdown-num text-7xl sm:text-8xl text-transparent bg-clip-text bg-gradient-to-b from-white via-zinc-100 to-zinc-400 text-center w-full">0</div>
-                    <div class="text-[11px] sm:text-xs font-black tracking-[0.3em] text-[#fcaf17] uppercase mt-2">Tage</div>
+                <div class="relative bg-black/85 backdrop-blur-2xl border border-white/20 rounded-2xl p-6 shadow-2xl flex flex-row items-center justify-center space-x-3 min-h-[140px]">
+                    <div id="days" class="countdown-num text-6xl sm:text-7xl text-transparent bg-clip-text bg-gradient-to-b from-white via-zinc-100 to-zinc-400">0</div>
+                    <div class="text-[10px] sm:text-xs font-black tracking-[0.25em] text-[#fcaf17] uppercase writing-mode-vertical">Tage</div>
                 </div>
             </div>
             <!-- Stunden -->
             <div class="relative group">
                 <div class="absolute -inset-0.5 bg-gradient-to-r from-[#fcaf17] to-pink-600 rounded-2xl blur opacity-30 group-hover:opacity-75 transition duration-500"></div>
-                <div class="relative bg-black/85 backdrop-blur-2xl border border-white/20 rounded-2xl p-6 shadow-2xl flex flex-col items-center justify-center min-h-[160px]">
-                    <div id="hours" class="countdown-num text-7xl sm:text-8xl text-transparent bg-clip-text bg-gradient-to-b from-white via-zinc-100 to-zinc-400 text-center w-full">0</div>
-                    <div class="text-[11px] sm:text-xs font-black tracking-[0.3em] text-[#fcaf17] uppercase mt-2">Stunden</div>
+                <div class="relative bg-black/85 backdrop-blur-2xl border border-white/20 rounded-2xl p-6 shadow-2xl flex flex-row items-center justify-center space-x-3 min-h-[140px]">
+                    <div id="hours" class="countdown-num text-6xl sm:text-7xl text-transparent bg-clip-text bg-gradient-to-b from-white via-zinc-100 to-zinc-400">0</div>
+                    <div class="text-[10px] sm:text-xs font-black tracking-[0.25em] text-[#fcaf17] uppercase">Stunden</div>
                 </div>
             </div>
             <!-- Minuten -->
             <div class="relative group">
                 <div class="absolute -inset-0.5 bg-gradient-to-r from-[#fcaf17] to-pink-600 rounded-2xl blur opacity-30 group-hover:opacity-75 transition duration-500"></div>
-                <div class="relative bg-black/85 backdrop-blur-2xl border border-white/20 rounded-2xl p-6 shadow-2xl flex flex-col items-center justify-center min-h-[160px]">
-                    <div id="minutes" class="countdown-num text-7xl sm:text-8xl text-transparent bg-clip-text bg-gradient-to-b from-white via-zinc-100 to-zinc-400 text-center w-full">0</div>
-                    <div class="text-[11px] sm:text-xs font-black tracking-[0.3em] text-[#fcaf17] uppercase mt-2">Minuten</div>
+                <div class="relative bg-black/85 backdrop-blur-2xl border border-white/20 rounded-2xl p-6 shadow-2xl flex flex-row items-center justify-center space-x-3 min-h-[140px]">
+                    <div id="minutes" class="countdown-num text-6xl sm:text-7xl text-transparent bg-clip-text bg-gradient-to-b from-white via-zinc-100 to-zinc-400">0</div>
+                    <div class="text-[10px] sm:text-xs font-black tracking-[0.25em] text-[#fcaf17] uppercase">Minuten</div>
                 </div>
             </div>
             <!-- Sekunden -->
             <div class="relative group">
                 <div class="absolute -inset-0.5 bg-gradient-to-r from-[#fcaf17] to-pink-600 rounded-2xl blur opacity-30 group-hover:opacity-75 transition duration-500"></div>
-                <div class="relative bg-black/85 backdrop-blur-2xl border border-white/20 rounded-2xl p-6 shadow-2xl flex flex-col items-center justify-center min-h-[160px]">
-                    <div id="seconds" class="countdown-num text-7xl sm:text-8xl text-transparent bg-clip-text bg-gradient-to-b from-white via-zinc-100 to-zinc-400 text-center w-full">0</div>
-                    <div class="text-[11px] sm:text-xs font-black tracking-[0.3em] text-[#fcaf17] uppercase mt-2">Sekunden</div>
+                <div class="relative bg-black/85 backdrop-blur-2xl border border-white/20 rounded-2xl p-6 shadow-2xl flex flex-row items-center justify-center space-x-3 min-h-[140px]">
+                    <div id="seconds" class="countdown-num text-6xl sm:text-7xl text-transparent bg-clip-text bg-gradient-to-b from-white via-zinc-100 to-zinc-400">0</div>
+                    <div class="text-[10px] sm:text-xs font-black tracking-[0.25em] text-[#fcaf17] uppercase">Sekunden</div>
                 </div>
             </div>
         </div>
