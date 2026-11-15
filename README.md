@@ -39,7 +39,9 @@
         }
         .countdown-num {
             font-family: 'Barlow Condensed', sans-serif;
-            font-weight: 900;
+            font-weight: 950;
+            font-variant-numeric: tabular-nums;
+            letter-spacing: -0.02em;
         }
         @keyframes subtleZoom {
             0% { transform: scale(1); }
@@ -99,27 +101,39 @@
             Willkommen in Leonida
         </h1>
 
-        <!-- COUNTDOWN-CONTAINER (Einstellig / ohne führende Nullen) -->
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-6 w-full max-w-4xl mb-12">
+        <!-- COUNTDOWN-CONTAINER (Optimierte Breiten und feste Spalten gegen Ineinandergreifen) -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 w-full max-w-5xl mb-12">
             <!-- Tage -->
-            <div class="bg-black/60 backdrop-blur-xl border border-white/15 rounded-xl p-4 sm:p-6 shadow-2xl">
-                <div id="days" class="countdown-num text-5xl sm:text-7xl text-white tracking-tight">0</div>
-                <div class="text-[11px] sm:text-xs font-extrabold tracking-[0.25em] text-zinc-400 uppercase mt-2">Tage</div>
+            <div class="relative group">
+                <div class="absolute -inset-0.5 bg-gradient-to-r from-[#fcaf17] to-pink-600 rounded-2xl blur opacity-30 group-hover:opacity-75 transition duration-500"></div>
+                <div class="relative bg-black/85 backdrop-blur-2xl border border-white/20 rounded-2xl p-6 shadow-2xl flex flex-col items-center justify-center min-h-[160px]">
+                    <div id="days" class="countdown-num text-7xl sm:text-8xl text-transparent bg-clip-text bg-gradient-to-b from-white via-zinc-100 to-zinc-400 text-center w-full">0</div>
+                    <div class="text-[11px] sm:text-xs font-black tracking-[0.3em] text-[#fcaf17] uppercase mt-2">Tage</div>
+                </div>
             </div>
             <!-- Stunden -->
-            <div class="bg-black/60 backdrop-blur-xl border border-white/15 rounded-xl p-4 sm:p-6 shadow-2xl">
-                <div id="hours" class="countdown-num text-5xl sm:text-7xl text-white tracking-tight">0</div>
-                <div class="text-[11px] sm:text-xs font-extrabold tracking-[0.25em] text-zinc-400 uppercase mt-2">Stunden</div>
+            <div class="relative group">
+                <div class="absolute -inset-0.5 bg-gradient-to-r from-[#fcaf17] to-pink-600 rounded-2xl blur opacity-30 group-hover:opacity-75 transition duration-500"></div>
+                <div class="relative bg-black/85 backdrop-blur-2xl border border-white/20 rounded-2xl p-6 shadow-2xl flex flex-col items-center justify-center min-h-[160px]">
+                    <div id="hours" class="countdown-num text-7xl sm:text-8xl text-transparent bg-clip-text bg-gradient-to-b from-white via-zinc-100 to-zinc-400 text-center w-full">0</div>
+                    <div class="text-[11px] sm:text-xs font-black tracking-[0.3em] text-[#fcaf17] uppercase mt-2">Stunden</div>
+                </div>
             </div>
             <!-- Minuten -->
-            <div class="bg-black/60 backdrop-blur-xl border border-white/15 rounded-xl p-4 sm:p-6 shadow-2xl">
-                <div id="minutes" class="countdown-num text-5xl sm:text-7xl text-white tracking-tight">0</div>
-                <div class="text-[11px] sm:text-xs font-extrabold tracking-[0.25em] text-zinc-400 uppercase mt-2">Minuten</div>
+            <div class="relative group">
+                <div class="absolute -inset-0.5 bg-gradient-to-r from-[#fcaf17] to-pink-600 rounded-2xl blur opacity-30 group-hover:opacity-75 transition duration-500"></div>
+                <div class="relative bg-black/85 backdrop-blur-2xl border border-white/20 rounded-2xl p-6 shadow-2xl flex flex-col items-center justify-center min-h-[160px]">
+                    <div id="minutes" class="countdown-num text-7xl sm:text-8xl text-transparent bg-clip-text bg-gradient-to-b from-white via-zinc-100 to-zinc-400 text-center w-full">0</div>
+                    <div class="text-[11px] sm:text-xs font-black tracking-[0.3em] text-[#fcaf17] uppercase mt-2">Minuten</div>
+                </div>
             </div>
             <!-- Sekunden -->
-            <div class="bg-black/60 backdrop-blur-xl border border-white/15 rounded-xl p-4 sm:p-6 shadow-2xl">
-                <div id="seconds" class="countdown-num text-5xl sm:text-7xl text-white tracking-tight">0</div>
-                <div class="text-[11px] sm:text-xs font-extrabold tracking-[0.25em] text-zinc-400 uppercase mt-2">Sekunden</div>
+            <div class="relative group">
+                <div class="absolute -inset-0.5 bg-gradient-to-r from-[#fcaf17] to-pink-600 rounded-2xl blur opacity-30 group-hover:opacity-75 transition duration-500"></div>
+                <div class="relative bg-black/85 backdrop-blur-2xl border border-white/20 rounded-2xl p-6 shadow-2xl flex flex-col items-center justify-center min-h-[160px]">
+                    <div id="seconds" class="countdown-num text-7xl sm:text-8xl text-transparent bg-clip-text bg-gradient-to-b from-white via-zinc-100 to-zinc-400 text-center w-full">0</div>
+                    <div class="text-[11px] sm:text-xs font-black tracking-[0.3em] text-[#fcaf17] uppercase mt-2">Sekunden</div>
+                </div>
             </div>
         </div>
 
@@ -149,8 +163,8 @@
         </div>
     </div>
 
-    <!-- SCRIPT -->
-    <script>
+        <!-- SCRIPT -->
+        <script>
         // Zielzeitpunkt: 19. November 2026, 00:00:00 Uhr
         const targetDate = new Date('2026-11-19T00:00:00').getTime();
 
@@ -164,7 +178,7 @@
                 const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-                // Direkt als Zahl ohne führende Nullen ausgegeben (einstellig/natürlich)
+                // Live-Aktualisierung der Ziffern ohne führende Nullen
                 document.getElementById('days').innerText = days;
                 document.getElementById('hours').innerText = hours;
                 document.getElementById('minutes').innerText = minutes;
@@ -211,10 +225,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
